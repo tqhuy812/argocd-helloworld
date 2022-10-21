@@ -14,6 +14,18 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 # you can change and delete init password
 
+# Get Minikube IP (192.168.49.2)
+minikube ip
+
+# Access ONOS CLI
+ssh -p 30101 karaf@192.168.49.2
+
+# Activate GUI app
+app activate gui
+
+# Access ONOS GUI
+http://192.168.49.2:30181/onos/ui/index.html#/topo
+
 ```
 </br>
 
