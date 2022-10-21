@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: onos-deployment
+  labels:
+    deployment: sdn-controller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      sdn-controller: onos
+  template:
+    metadata:
+      labels:
+        sdn-controller: onos
+    spec:
+      containers:
+      - name: onos-demo
+        #image: onosproject/onos:2.5.0
+        image: onosproject/onos:2.2.1
+        stdin: true
+        tty: true
+        env:
+        - name: ONOS_APPS
+          value: openflow,ovsdb
