@@ -13,6 +13,7 @@ kubectl port-forward svc/argocd-server 8080:443 -n argocd
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 --decode && echo
 
 # you can change and delete init password
+kubectl patch secret -n argocd argocd-secret -p '{"stringData": { "admin.password": "'$(htpasswd -bnBC 10 "" newpassword | tr -d ':\n')'"}}'
 
 # Get Minikube IP (192.168.49.2)
 minikube ip
