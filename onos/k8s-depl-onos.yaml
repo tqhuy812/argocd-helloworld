@@ -5,7 +5,7 @@ metadata:
   labels:
     deployment: sdn-controller
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       sdn-controller: onos
@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: onos-demo
-#         image: onosproject/onos:2.2.1
-        image: onosproject/onos:2.5.0
+        image: onosproject/onos:2.2.1
+#         image: onosproject/onos:2.5.0
         stdin: true
         tty: true
         env:
