@@ -5,7 +5,7 @@ metadata:
   labels:
     deployment: sdn-controller
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       sdn-controller: onos
