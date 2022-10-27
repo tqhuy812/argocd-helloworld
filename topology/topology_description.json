@@ -1,0 +1,55 @@
+{
+  "topology": {
+    "uuid": "topo1",
+    "node": [
+      {
+        "uuid": "NODE210",
+        "vendor": "NOKIA",
+        "device": "1830PSS-32",
+        "host": "135.238.196.210",
+        "port": "830",
+        "username": "admin",
+        "password": "admin"
+      },
+      {
+        "uuid": "NODE213",
+        "vendor": "NOKIA",
+        "device": "1830PSS-32",
+        "host": "135.238.196.213",
+        "port": "830",
+        "username": "admin",
+        "password": "admin"
+      }
+    ],
+    "link": [
+      {
+        "uuid": "NODE210toNODE213",
+        "port": [
+          {
+            "node-uuid": "NODE210",
+            "port": "1/6/LINEOUT"
+          },
+          {
+            "node-uuid": "NODE213",
+            "port": "1/6/LINEIN"
+          }
+        ],
+        "direction": "UNIDIRECTIONAL"
+      },
+      {
+        "uuid": "NODE213toNODE210",
+        "port": [
+          {
+            "node-uuid": "NODE213",
+            "port": "1/6/LINEOUT"
+          },
+          {
+            "node-uuid": "NODE210",
+            "port": "1/6/LINEIN"
+          }
+        ],
+        "direction": "UNIDIRECTIONAL"
+      }
+    ]
+  }
+}
