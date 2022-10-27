@@ -38,7 +38,7 @@ MASTER_BRANCH = "main"
 GITHUB_ARGOCD_TOKEN = "GITHUB_ARGOCD_TOKEN"
 REPO = "tqhuy812/argocd-helloworld"
 
-token = os.getenv(GITHUB_ARGOCD_TOKEN, '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')
+token = os.getenv(GITHUB_ARGOCD_TOKEN, '')
 # print(token)
 g = Github(token)
 repo = g.get_repo(REPO)
