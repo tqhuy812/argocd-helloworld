@@ -18,7 +18,7 @@ spec:
       - env:
         - name: ONOS_APPS
           value: openflow,ovsdb
-        image: onosproject/onos:2.5.0
+        image: onosproject/onos:2.2.1
         name: onos-demo
         stdin: true
         tty: true
